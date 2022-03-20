@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
 
+
 const app = express();
 
 app.use(express.static("public"));
@@ -16,9 +17,10 @@ app.post("/", function(req, res) {
   const lastName = req.body.lName;
  const email = req.body.email;
 
-  console.log(firstName );
+  console.log(firstName, lastName,email);
   res.sendFile(__dirname +"/success.html")
 });
+
 
 // app.get('/success', function (req, res) {
 //   res.sendFile(__dirname + '/success.html')
