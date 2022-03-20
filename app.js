@@ -47,7 +47,7 @@ app.post("/", function (req, res) {
 });
 
 app.listen(process.env.PORT, function () {
-  console.log("listening on 3000");
+  console.log("App is listening");
 })
 
 // 0378d24a5e346b275ea9ba23165d4f2e-us14
