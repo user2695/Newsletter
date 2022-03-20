@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
 const https = require("https");
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 
@@ -46,8 +47,8 @@ app.post("/", function (req, res) {
   res.sendFile(__dirname + "/success.html")
 });
 
-app.listen(process.env.PORT, function () {
-  console.log("App is listening");
+app.listen(PORT, function () {
+  console.log(`Listening on ${ PORT }`);
 })
 
 // 0378d24a5e346b275ea9ba23165d4f2e-us14
